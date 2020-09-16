@@ -1,0 +1,17 @@
+Begin Transaction :1
+Read lock on item Y by transaction 1
+Read lock on item Z by transaction 1
+Begin Transaction :2
+Transaction 2 obtained read lock on item Y
+Begin Transaction :3
+Transaction 3 obtained read lock on item Y
+Upgrade lock from read to write on item Z by transaction 1
+Transaction 3   aborted 
+Transaction status 2 changed to wait 
+Operation r2(X);
+ added to waiting list of operations which belongs to Transaction 2
+Transaction 1 committed 
+Operations of the transaction 2 has been resumed 
+Upgrade lock from read to write on item Y by transaction 2
+Transaction 3 is aborted 
+Transaction 2 committed 
